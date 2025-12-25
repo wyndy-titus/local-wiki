@@ -1,0 +1,12 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor stuff
+.vscode/
+.idea/
+
+# Temp files
+*.swp
+*~
+

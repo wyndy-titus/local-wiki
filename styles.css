@@ -1,0 +1,142 @@
+:root {
+    --bg: #0f1115;
+    --card: #161a22;
+    --text: #e9ecf1;
+    --muted: #b6c0d1;
+    --link: #8ab4ff;
+    --border: #2a3242;
+    --mono: 'JetBrains Mono', Consolas, monospace;
+    --sans: Urbanist, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;    
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.header-left {
+    max-width: 65%;
+}
+
+.header-right {
+    margin-left: auto;
+    /* 👈 THIS keeps it on the right */
+    flex-shrink: 0;
+    transform: translateY(4px);
+}
+
+.header-image {
+    width: 112px;
+    height: auto;
+    opacity: 0.95;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin: 0.2em 0;
+}
+
+p {
+    color: var(--muted);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin: 14px 0;
+}
+
+ul {
+    margin: 8px 0 0 18px;
+}
+
+code,
+pre {
+    font-family: var(--mono);
+}
+
+pre {
+    background: #0b0d12;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    overflow: auto;
+}
+
+.breadcrumb {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.breadcrumb li::after {
+    content: "→";
+    margin-left: 0.4rem;
+    color: var(--border);
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+.breadcrumb a {
+    color: var(--link);
+}
+
+small {
+    color: var(--muted);
+}

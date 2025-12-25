@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSCI 241</title>
+    <link rel="stylesheet" href="../../../styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="breadcrumb">
+                <ol>
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../index.html">CSCI 241</a></li>
+                    <li>Logic</li>
+                </ol>
+            </nav>
+            <h1>Logic</h1>            
+        </header>
+      
+        <!-- Markdown content will appear here -->
+        <div id="cards">            
+        </div>
+    </div>
+
+    <script>
+        fetch("../notes/01-logic.md")
+            .then(res => res.text())
+            .then(md => {
+                const sections = md.split(/\n# /);
+
+                const container = document.getElementById("cards");
+
+                sections.forEach((section, index) => {
+                    if (index === 0 && section.trim() === "") return;
+
+                    const content =
+                        index === 0 ? section : "## " + section;
+
+                    const card = document.createElement("article");
+                    card.className = "card";
+                    card.innerHTML = marked.parse(content);
+
+                    container.appendChild(card);
+                });
+            });
+    </script>
+
+
+</body>
+</html>
