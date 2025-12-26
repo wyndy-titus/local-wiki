@@ -136,3 +136,75 @@ A truth table for a compound proposition has a row for every possible combinatio
 The truth table for the compound proposition (**_p_** ∨ **_r_**) ∧ **_¬p_** has 2³ = 8 rows.
 
 # 1.3 Conditional Statements
+
+The **conditional operation** is denoted with the symbol →  
+The proposition **_p_** → **_q_** is read "if **_p_**, then **_q_**."
+
+> **_p → q_** is FALSE if **_p_** is true and **_q_** is false; otherwise, **_p → q_** is TRUE
+
+In **_p → q_**, the proposition **_p_** is the **hypothesis**, and the proposition **_q_** is the conclusion.
+
+```
+Truth Table: CONDITIONAL (→)
+
+ p     q       p → q
+---------------------
+ T     T         T
+ T     F         F
+ F     T         T
+ F     F         T
+
+```
+
+_The only way for a conditional statement to be false is if the hypothesis is true and the conclusion is false._  
+_If the hypothesis is false, then the conditional statement is true regardless of the truth value of the conclusion._
+
+### English expressions of the conditional operation
+
+Consider the propositions:
+
+> **_p_**: The bears have honey.  
+> **_q_**: The bears are happy.
+
+- [If p, then q] // If the bears have honey, then the bears are happy.
+- [If p, q] // If the bears have honey, the bears are happy.
+- [q if p] // The bears are happy if the bears have honey.
+- [p implies q] // Having honey implies that the bears are happy.
+- [q whenever p] // The bears are happy whenever they have honey.
+- [p only if q] // The bears have honey only if the bears are happy.
+- [p is sufficient for q] // The bears having honey is sufficient for them to be happy.
+- [q is necessary for p] // The bears being happy is necessary for the bears to have honey.
+
+<br>
+
+### The converse, contrapositive, and inverse
+
+```
+Proposition:         p → q    If the bears have honey, the bears are happy.
+
+CONVERSE             q → p    If the bears are happy, the bears have honey.
+CONTRAPOSITIVE      ¬q → ¬p   If the bears are not happy, the bears do not have honey.
+INVERSE             ¬p → ¬q   If the bears do not have honey, the bears are not happy.
+
+```
+
+<br>
+
+### The biconditional operation
+
+The **biconditional operation** is denoted with the symbol ↔  
+The proposition **_p_** ↔ **_q_** is read "**_p_** if and only if **_q_**."
+
+> **_p ↔ q_** is TRUE only when **_p_** and **_q_** have the same truth values
+
+```
+Truth Table: BICONDITIONAL (↔)
+
+ p     q       p ↔ q
+---------------------
+ T     T         T
+ T     F         F
+ F     T         F
+ F     F         T
+
+```
