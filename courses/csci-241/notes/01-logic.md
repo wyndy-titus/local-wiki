@@ -208,3 +208,138 @@ Truth Table: BICONDITIONAL (↔)
  F     F         T
 
 ```
+
+# 1.4 Logical Equivalence
+
+**tautology** - a compound proposition that is always true regardless of the truth value of its individual propositions  
+**contradiction** - a compound proposition that is always false regardless of the truth value of its individual propositions
+
+> **_p_** ∨ **_¬p_** is a tautology since the proposition is always true whether **_p_** is true or false  
+> **_p_** ∧ **_¬p_** is a contradiction since the proposition is always false regardless of whether **_p_** is true or false
+
+```
+Truth Table: TAUTOLOGY (p ∨ ¬p)
+
+ p     ¬p      p ∨ ¬p
+---------------------
+ T      F        T
+ F      T        T
+
+```
+
+```
+Truth Table: CONTRADICTION (p ∧ ¬p)
+
+ p     ¬p      p ∧ ¬p
+---------------------
+ T      F        F
+ F      T        F
+
+```
+
+<br>
+
+Two compound propositions are **logically equivalent** if they have the same truth value regardless of the truth values of their individual propositions.
+
+> If **_s_** and **_r_** are two compound propositions, the notation **_s_** ≡ **_r_** is used to indicate that **_s_** and **_r_** are logically equivalent.
+
+Propositions **_s_** and **_r_** are logically equivalent if and only if the proposition **_s_** ↔ **_r_** is a tautology.
+
+### De Morgan's Laws
+
+**De Morgan's laws** are logical equivalences that show how to correctly distribute a negation operation inside a parenthesized expression.
+
+> ¬(**_p_** ∨ **_q_**) ≡ (**_¬p_** ∧ **_¬q_**)
+
+When the negation operation is distributed inside the parenthesis, **the disjunction operation changes to a conjunction operation.**
+
+Given the following propositions:
+
+> **_p_**: The patient has migraines.  
+> **_q_**: The patient has high blood pressure.
+
+De Morgan's law says that the following two statements are logically equivalent:
+
+> It is not true that the patient has migraines or high blood pressure.  
+> The patient does not have migraines and does not have high blood pressure.
+
+```
+Truth Table to show: ¬(p ∨ q) ≡ (¬p ∧ ¬q)
+
+ p    q    ¬p    ¬q     p ∨ q     ¬(p ∨ q)     ¬p ∧ ¬q
+-------------------------------------------------------
+ T    T     F     F       T           F           F
+ T    F     F     T       T           F           F
+ F    T     T     F       T           F           F
+ F    F     T     T       F           T           T
+
+```
+
+The second version of De Morgan's law swaps the role of the disjunction and conjunction:
+
+> ¬(**_p_** ∧ **_q_**) ≡ (**_¬p_** ∨ **_¬q_**)
+
+Continuing with the same example, the following two statements are logically equivalent:
+
+> It is not true that the patient has migraines and high blood pressure.  
+> The patient does not have migraines or does not have high blood pressure.
+
+```
+Truth Table to show: ¬(p ∧ q) ≡ (¬p ∨ ¬q)
+
+ p    q    ¬p    ¬q     p ∧ q     ¬(p ∧ q)     ¬p ∨ ¬q
+-------------------------------------------------------
+ T    T     F     F       T           F           F
+ T    F     F     T       F           T           T
+ F    T     T     F       F           T           T
+ F    F     T     T       F           T           T
+
+```
+
+### Examples for logically equivalent statements:
+
+1️⃣ It is not true that an average person sleeps more than 8 hours or commutes to work less than 30 minutes each day.
+
+STEP 1 - Find **_p_** and **_q_**
+
+> **_p_**: An average person sleeps more than 8 hours.  
+> **_q_**: An average person commutes to work less than 30 minutes each day.
+
+STEP 2 - Translate the statement into its logical proposition
+
+> It is **not true** that an average person sleeps more than 8 hours **or** commutes to work less than 30 mins each day.  
+> That statement is equivalent to **¬(p ∨ q)**.
+
+STEP 3 - Use De Morgan's law to find the equivalent statement
+
+> Since the original statement is **¬(p ∨ q)**, by De Morgan's law, its equivalent statement is (**_¬p_** ∧ **_¬q_**).
+
+STEP 4 - Translate the logical proposition to its equivalent statement
+
+> (**_¬p_** ∧ **_¬q_**)  
+> **_¬p_** -> An average person **does not** sleep more than 8 hours. // (**at most** 8 hours)  
+> **_¬q_** -> An average person **does not** commute to work less than 30 mins each day. // (**at least** 30 mins)
+
+<br>
+
+2️⃣ It is not true that the pizza has at least 3 types of cheese and at most 4 toppings.
+
+STEP 1 - Find **_p_** and **_q_**
+
+> **_p_**: The pizza has at least 3 types of cheese.  
+> **_q_**: The pizza at most has 4 toppings.
+
+STEP 2 - Translate the statement into its logical proposition
+
+> It is **not true** that the pizza has at least 3 types of cheese **and** at most 4 toppings.  
+> That statement is equivalent to **¬(p ∧ q)**.
+
+STEP 3 - Use De Morgan's law to find the equivalent statement
+
+> Since the original statement is **¬(p ∧ q)**, by De Morgan's law, its equivalent statement is (**_¬p_** ∨ **_¬q_**).
+
+STEP 4 - Translate the logical proposition to its equivalent statement
+
+> (**_¬p_** ∨ **_¬q_**)
+> **_¬p_** -> The pizza **does not** have at least 3 types of cheese. // (**has less than** 3 types of cheese)  
+> **_¬q_** -> The pizza **does not** have at most 4 toppings. // (**has more than** 4 toppings)
