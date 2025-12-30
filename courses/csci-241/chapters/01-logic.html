@@ -29,6 +29,13 @@
     </div>
 
     <script>
+         marked.setOptions({
+                gfm: true,
+                breaks: false,     // keep normal markdown line rules
+                headerIds: false,
+                mangle: false
+            });
+
         fetch("../notes/01-logic.md")
             .then(res => res.text())
             .then(md => {

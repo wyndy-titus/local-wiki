@@ -91,6 +91,38 @@ a:hover {
     margin: 14px 0;
 }
 
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: 0.95rem;
+}
+
+.card th,
+.card td {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0.85rem;
+    vertical-align: top;
+}
+
+.card th {
+    font-weight: 600;
+}
+
+.card td:nth-child(2),
+.card td:nth-child(3) {
+    text-align: center;
+    white-space: nowrap;
+    /* keeps logic expressions from wrapping ugly */
+}
+
+/* responsive: don’t explode your layout */
+.card table {
+    display: block;
+    overflow-x: auto;
+}
+
+
 ul {
     margin: 8px 0 0 18px;
 }

@@ -343,3 +343,109 @@ STEP 4 - Translate the logical proposition to its equivalent statement
 > (**_¬p_** ∨ **_¬q_**)
 > **_¬p_** -> The pizza **does not** have at least 3 types of cheese. // (**has less than** 3 types of cheese)  
 > **_¬q_** -> The pizza **does not** have at most 4 toppings. // (**has more than** 4 toppings)
+
+<br>
+
+# 1.5 Laws of Propositional Logic
+
+<br>
+
+<table>
+    <tr>
+        <th>Law</th>
+        <th>Version 1</th>
+        <th>Version 2</th>
+    </tr>
+    <tr>
+        <td>Idempotent</td>
+        <td>p ∨ p ≡ p</td>
+        <td>p ∧ p ≡ p</td>
+    </tr>
+    <tr>
+        <td>Associative</td>
+        <td>(p ∨ q) ∨ r ≡ p ∨ (q ∨ r)</td>
+        <td>(p ∧ q) ∧ r ≡ p ∧ (q ∧ r)</td>
+    </tr>
+    <tr>
+        <td>Commutative</td>
+        <td>p ∨ q ≡ q ∨ p</td>
+        <td>p ∧ q ≡ q ∧ p</td>
+    </tr>
+    <tr>
+        <td>Distributive</td>
+        <td>p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)</td>
+        <td>p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)</td>
+    </tr>
+    <tr>
+        <td>Identity</td>
+        <td>p ∨ F ≡ p</td>
+        <td>p ∧ T ≡ p</td>
+    </tr>
+    <tr>
+        <td>Domination</td>
+        <td>p ∧ F ≡ F</td>
+        <td>p ∨ T ≡ T</td>
+    </tr>
+    <tr>
+        <td>Double negation</td>
+        <td>¬¬p ≡ p</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Complement</td>
+        <td>p ∧ ¬p ≡ F <br> ¬T ≡ F</td>
+        <td>p ∨ ¬p ≡ T <br> ¬F ≡ T</td>
+    </tr>
+    <tr>
+        <td>De Morgan's</td>
+        <td>¬(p ∨ q) ≡ ¬p ∧ ¬q</td>
+        <td>¬(p ∧ q) ≡ ¬p ∨ ¬q</td>
+    </tr>
+    <tr>
+        <td>Absorption</td>
+        <td>p ∨ (p ∧ q) ≡ p</td>
+        <td>p ∧ (p ∨ q) ≡ p</td>
+    </tr>
+    <tr>
+        <td>Conditional identity</td>
+        <td>p → q ≡ ¬p ∨ q</td>
+        <td>p ↔ q ≡ (p → q) ∧ (q → p)</td>
+    </tr>
+</table>
+
+<!--
+| Law             |            Version 1            |            Version 2            |
+| --------------- | :-----------------------------: | :-----------------------------: |
+| Idempotent      |            p ∨ p ≡ p            |            p ∧ p ≡ p            |
+| Associative     |    (p ∨ q) ∨ r ≡ p ∨ (q ∨ r)    |    (p ∧ q) ∧ r ≡ p ∧ (q ∧ r)    |
+| Commutative     |          p ∨ q ≡ q ∨ p          |          p ∧ q ≡ q ∧ p          |
+| Distributive    | p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r) | p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) |
+| Identity        |            p ∨ F ≡ p            |            p ∧ T ≡ p            |
+| Domination      |            p ∧ F ≡ F            |            p ∨ T ≡ T            |
+| Double negation |             ¬¬p ≡ p             |                                 |
+| Complement      |     p ∧ ¬p ≡ F <br> ¬T ≡ F      |     p ∨ ¬p ≡ T <br> ¬F ≡ T      |
+| De Morgan's     |       ¬(p ∨ q) ≡ ¬p ∧ ¬q        |       ¬(p ∧ q) ≡ ¬p ∨ ¬q        |
+| Absorption      |         p ∨ (p ∧ q) ≡ p         |         p ∧ (p ∨ q) ≡ p         |
+| Conditional     |         p → q ≡ ¬p ∨ q          |    p ↔ q ≡ (p → q) ∧ (q → p)    |
+-->
+<br>
+
+### Using the laws of propositional logic to show logical equivalence
+
+Completing the proof: **¬(p → q) ≡ p ∧ ¬q**
+
+STEP 1 - Start with the expression on the left of the equivalence
+
+> ¬(p → q)
+
+STEP 2 - Apply the conditional identity [a → b ≡ ¬a ∨ b]
+
+> ¬(¬p ∨ q)
+
+STEP 3 - Apply De Morgan's law [¬(a ∨ b) ≡ ¬a ∧ ¬b]
+
+> ¬¬p ∧ ¬q
+
+STEP 4 - Apply the double negation law [¬¬a ≡ a]
+
+> p ∧ ¬q
